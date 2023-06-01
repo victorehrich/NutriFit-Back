@@ -25,6 +25,16 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
 });
+var AcceptOrigins = "AcceptOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: AcceptOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:4200").AllowAnyHeader()
+                                                  .AllowAnyMethod();
+                      });
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -84,6 +94,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors(AcceptOrigins);
 
 
 app.UseAuthentication();

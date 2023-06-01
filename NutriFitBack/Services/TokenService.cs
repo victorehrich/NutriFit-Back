@@ -10,19 +10,27 @@ namespace NutriFitBack.Services
     {
         public static string GenerateToken(UserDTO user)
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(Settings.Secret);
-            var tokenDescriptor = new SecurityTokenDescriptor
+            try
             {
-                Expires = DateTime.UtcNow.AddHours(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
-                Subject = new System.Security.Claims.ClaimsIdentity(new[] { 
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.ASCII.GetBytes(Settings.Secret);
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Expires = DateTime.UtcNow.AddHours(1),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+                    Subject = new System.Security.Claims.ClaimsIdentity(new[] {
                     new Claim(ClaimTypes.Name, user.Email),
                     new Claim("Id", user.Id.ToString()),
                 })
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
+                };
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+                return tokenHandler.WriteToken(token);
+            }
+            catch
+            {
+                throw new Exception("Não foi possível gerar o token");
+            }
+
         }
     }
 }

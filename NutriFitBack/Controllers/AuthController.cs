@@ -21,15 +21,26 @@ namespace NutriFitBack.Controllers
         [AllowAnonymous]
         public ActionResult<dynamic> Authenticate([FromBody] LoginDTO login)
         {
-            var user = repository.GetUsersByEmail(login.Email);
-            var token = TokenService.GenerateToken(user);
-            user.Password = "";
-            var response = new
+            try
             {
-                user = user,
-                token = token,
-            };
-            return response;
+                var user = repository.GetUsersByEmail(login.Email);
+                if (user == null) throw new Exception("usuário não encontrado");
+                var token = TokenService.GenerateToken(user);
+
+                user.Password = "";
+
+                var response = new
+                {
+                    user = user,
+                    token = token,
+                };
+                return response;
+            }
+            catch(Exception ex)
+            {
+                return NotFound("Usuário ou senha inválidos");
+            }
+
         }
     }
 }
