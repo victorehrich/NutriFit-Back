@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SHFmK92lAWDd/dS6JYuNvD3F8megyCfRgQagqR2ZEvmX55NZwjTMM/zcsQfnraoWem0Cbtt4AdYeLbEp5O2CBg==",
+  "dgSpecHash": "BsUwIlPsEEMqbAVmV09VuCIzlhdeXD7j0MyoE86kCb91h0ljwN25C1wLotFqiIsqSEZYMLkDis/ZwbOndem1nQ==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj",
+  "projectFilePath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

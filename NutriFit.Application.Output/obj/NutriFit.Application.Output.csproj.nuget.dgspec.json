@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj": {}
+    "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj": {
+    "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj",
+        "projectUniqueName": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj",
         "projectName": "NutriFit.Application.Output",
-        "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj",
-        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\obj\\",
+        "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj",
+        "packagesPath": "/home/gabriel/.nuget/packages/",
+        "outputPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gabriel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
         }
       }
     }

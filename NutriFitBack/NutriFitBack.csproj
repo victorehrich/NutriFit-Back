@@ -17,10 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NutriFit.Application.input\NutriFit.Application.Input.csproj" />
-    <ProjectReference Include="..\NutriFit.Application.Output\NutriFit.Application.Output.csproj" />
-    <ProjectReference Include="..\NutriFit.Infrastructure.Input\NutriFit.Infrastructure.Input.csproj" />
-    <ProjectReference Include="..\NutriFit.Infrastructure.Output\NutriFit.Infrastructure.Output.csproj" />
+    <ProjectReference Include="../NutriFit.Application.Input/NutriFit.Application.Input.csproj" />
+    <ProjectReference Include="../NutriFit.Application.Output/NutriFit.Application.Output.csproj" />
+    <ProjectReference Include="../NutriFit.Infrastructure.Input/NutriFit.Infrastructure.Input.csproj" />
+    <ProjectReference Include="../NutriFit.Infrastructure.Output/NutriFit.Infrastructure.Output.csproj" />
   </ItemGroup>
 
 </Project>

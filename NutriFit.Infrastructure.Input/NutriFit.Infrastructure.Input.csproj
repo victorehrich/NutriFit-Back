@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NutriFit.Application.input\NutriFit.Application.Input.csproj" />
-    <ProjectReference Include="..\NutriFit.Infrastructure.Shared\NutriFit.Infrastructure.Shared.csproj" />
+    <ProjectReference Include="../NutriFit.Application.Input/NutriFit.Application.Input.csproj" />
+    <ProjectReference Include="../NutriFit.Infrastructure.Shared/NutriFit.Infrastructure.Shared.csproj" />
   </ItemGroup>
 
 </Project>

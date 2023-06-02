@@ -1,6 +1,11 @@
+FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS base
+WORKDIR /app
+EXPOSE 80
+
 FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
 ENV ASPNETCORE_ENVIRONMENT=Development
-WORKDIR /app
+WORKDIR /src
+
 COPY *.sln .
 COPY NutriFitBack/*.csproj ./NutriFitBack/
 COPY NutriFit.Application.Input/*.csproj ./NutriFit.Application.Input/
@@ -13,12 +18,33 @@ COPY NutriFit.Infrastructure.Shared/*.csproj ./NutriFit.Infrastructure.Shared/
 
 RUN dotnet restore
 
+COPY . .
 
-WORKDIR /app
-RUN dotnet publish -c Release -o out
+WORKDIR /src/NutriFitBack
+RUN dotnet build -c Release -o /app
 
-FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine as runtime
+WORKDIR /src/NutriFit.Application.Input
+RUN dotnet build -c Release -o /app
+
+WORKDIR /src/NutriFit.Application.Output
+RUN dotnet build -c Release -o /app
+
+WORKDIR /src/NutriFit.Domain
+RUN dotnet build -c Release -o /app
+
+WORKDIR /src/NutriFit.Infrastructure.Input
+RUN dotnet build -c Release -o /app
+
+WORKDIR /src/NutriFit.Infrastructure.Output
+RUN dotnet build -c Release -o /app
+
+WORKDIR /src/NutriFit.Infrastructure.Shared
+RUN dotnet build -c Release -o /app
+
+FROM build AS publish
+RUN dotnet publish -c Release -o /app
+
+FROM base AS final
 WORKDIR /app
-EXPOSE 8082
-COPY --from=build /app .
-ENTRYPOINT ["dotnet", "/app/NutriFitBack.dll"]
+COPY --from=publish /app .
+ENTRYPOINT ["dotnet", "NutriFitBack.dll"]

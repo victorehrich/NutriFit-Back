@@ -1,35 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\C#\\NutriFit\\NutriFitBack\\NutriFitBack.csproj": {}
+    "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFitBack/NutriFitBack.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Input\\NutriFit.Application.Input.csproj": {
+    "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Input/NutriFit.Application.Input.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Input\\NutriFit.Application.Input.csproj",
+        "projectUniqueName": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Input/NutriFit.Application.Input.csproj",
         "projectName": "NutriFit.Application.Input",
-        "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Input\\NutriFit.Application.Input.csproj",
-        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.input\\obj\\",
+        "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Input/NutriFit.Application.Input.csproj",
+        "packagesPath": "/home/gabriel/.nuget/packages/",
+        "outputPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Input/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gabriel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Projects\\C#\\NutriFit\\NutriFit.Domain\\NutriFit.Domain.csproj": {
-                "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Domain\\NutriFit.Domain.csproj"
+              "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Domain/NutriFit.Domain.csproj": {
+                "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Domain/NutriFit.Domain.csproj"
               }
             }
           }
@@ -59,28 +57,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj": {
+    "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj",
+        "projectUniqueName": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj",
         "projectName": "NutriFit.Application.Output",
-        "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj",
-        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\obj\\",
+        "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj",
+        "packagesPath": "/home/gabriel/.nuget/packages/",
+        "outputPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gabriel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -114,28 +110,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\C#\\NutriFit\\NutriFit.Domain\\NutriFit.Domain.csproj": {
+    "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Domain/NutriFit.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\C#\\NutriFit\\NutriFit.Domain\\NutriFit.Domain.csproj",
+        "projectUniqueName": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Domain/NutriFit.Domain.csproj",
         "projectName": "NutriFit.Domain",
-        "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Domain\\NutriFit.Domain.csproj",
-        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Domain\\obj\\",
+        "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Domain/NutriFit.Domain.csproj",
+        "packagesPath": "/home/gabriel/.nuget/packages/",
+        "outputPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gabriel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -169,39 +163,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Input\\NutriFit.Infrastructure.Input.csproj": {
+    "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Input/NutriFit.Infrastructure.Input.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Input\\NutriFit.Infrastructure.Input.csproj",
+        "projectUniqueName": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Input/NutriFit.Infrastructure.Input.csproj",
         "projectName": "NutriFit.Infrastructure.Input",
-        "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Input\\NutriFit.Infrastructure.Input.csproj",
-        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Input\\obj\\",
+        "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Input/NutriFit.Infrastructure.Input.csproj",
+        "packagesPath": "/home/gabriel/.nuget/packages/",
+        "outputPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Input/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gabriel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.input\\NutriFit.Application.Input.csproj": {
-                "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.input\\NutriFit.Application.Input.csproj"
+              "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Input/NutriFit.Application.Input.csproj": {
+                "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Input/NutriFit.Application.Input.csproj"
               },
-              "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Shared\\NutriFit.Infrastructure.Shared.csproj": {
-                "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Shared\\NutriFit.Infrastructure.Shared.csproj"
+              "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Shared/NutriFit.Infrastructure.Shared.csproj": {
+                "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Shared/NutriFit.Infrastructure.Shared.csproj"
               }
             }
           }
@@ -245,39 +237,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Output\\NutriFit.Infrastructure.Output.csproj": {
+    "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Output/NutriFit.Infrastructure.Output.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Output\\NutriFit.Infrastructure.Output.csproj",
+        "projectUniqueName": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Output/NutriFit.Infrastructure.Output.csproj",
         "projectName": "NutriFit.Infrastructure.Output",
-        "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Output\\NutriFit.Infrastructure.Output.csproj",
-        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Output\\obj\\",
+        "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Output/NutriFit.Infrastructure.Output.csproj",
+        "packagesPath": "/home/gabriel/.nuget/packages/",
+        "outputPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Output/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gabriel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj": {
-                "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj"
+              "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj": {
+                "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj"
               },
-              "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Shared\\NutriFit.Infrastructure.Shared.csproj": {
-                "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Shared\\NutriFit.Infrastructure.Shared.csproj"
+              "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Shared/NutriFit.Infrastructure.Shared.csproj": {
+                "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Shared/NutriFit.Infrastructure.Shared.csproj"
               }
             }
           }
@@ -321,28 +311,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Shared\\NutriFit.Infrastructure.Shared.csproj": {
+    "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Shared/NutriFit.Infrastructure.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Shared\\NutriFit.Infrastructure.Shared.csproj",
+        "projectUniqueName": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Shared/NutriFit.Infrastructure.Shared.csproj",
         "projectName": "NutriFit.Infrastructure.Shared",
-        "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Shared\\NutriFit.Infrastructure.Shared.csproj",
-        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Shared\\obj\\",
+        "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Shared/NutriFit.Infrastructure.Shared.csproj",
+        "packagesPath": "/home/gabriel/.nuget/packages/",
+        "outputPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gabriel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -376,45 +364,43 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\C#\\NutriFit\\NutriFitBack\\NutriFitBack.csproj": {
+    "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFitBack/NutriFitBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\C#\\NutriFit\\NutriFitBack\\NutriFitBack.csproj",
+        "projectUniqueName": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFitBack/NutriFitBack.csproj",
         "projectName": "NutriFitBack",
-        "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFitBack\\NutriFitBack.csproj",
-        "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\C#\\NutriFit\\NutriFitBack\\obj\\",
+        "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFitBack/NutriFitBack.csproj",
+        "packagesPath": "/home/gabriel/.nuget/packages/",
+        "outputPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFitBack/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/gabriel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.input\\NutriFit.Application.Input.csproj": {
-                "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.input\\NutriFit.Application.Input.csproj"
+              "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Input/NutriFit.Application.Input.csproj": {
+                "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Input/NutriFit.Application.Input.csproj"
               },
-              "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj": {
-                "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Application.Output\\NutriFit.Application.Output.csproj"
+              "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj": {
+                "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Application.Output/NutriFit.Application.Output.csproj"
               },
-              "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Input\\NutriFit.Infrastructure.Input.csproj": {
-                "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Input\\NutriFit.Infrastructure.Input.csproj"
+              "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Input/NutriFit.Infrastructure.Input.csproj": {
+                "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Input/NutriFit.Infrastructure.Input.csproj"
               },
-              "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Output\\NutriFit.Infrastructure.Output.csproj": {
-                "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Output\\NutriFit.Infrastructure.Output.csproj"
+              "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Output/NutriFit.Infrastructure.Output.csproj": {
+                "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Output/NutriFit.Infrastructure.Output.csproj"
               }
             }
           }
@@ -465,7 +451,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
         }
       }
     }

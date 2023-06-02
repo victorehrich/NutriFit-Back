@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NutriFit.Application.Output\NutriFit.Application.Output.csproj" />
-    <ProjectReference Include="..\NutriFit.Infrastructure.Shared\NutriFit.Infrastructure.Shared.csproj" />
+    <ProjectReference Include="../NutriFit.Application.Output/NutriFit.Application.Output.csproj" />
+    <ProjectReference Include="../NutriFit.Infrastructure.Shared/NutriFit.Infrastructure.Shared.csproj" />
   </ItemGroup>
 
 </Project>

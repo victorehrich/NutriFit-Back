@@ -8,26 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\victo\\.nuget\\packages\\": {}
+    "/home/gabriel/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Shared\\NutriFit.Infrastructure.Shared.csproj",
+      "projectUniqueName": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Shared/NutriFit.Infrastructure.Shared.csproj",
       "projectName": "NutriFit.Infrastructure.Shared",
-      "projectPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Shared\\NutriFit.Infrastructure.Shared.csproj",
-      "packagesPath": "C:\\Users\\victo\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\C#\\NutriFit\\NutriFit.Infrastructure.Shared\\obj\\",
+      "projectPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Shared/NutriFit.Infrastructure.Shared.csproj",
+      "packagesPath": "/home/gabriel/.nuget/packages/",
+      "outputPath": "/home/gabriel/Documents/ufc/NutriFit-Back/NutriFit.Infrastructure.Shared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\victo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/gabriel/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.408/RuntimeIdentifierGraph.json"
       }
     }
   }
