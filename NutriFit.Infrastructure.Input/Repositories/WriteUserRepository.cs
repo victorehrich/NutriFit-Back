@@ -4,7 +4,7 @@ using NutriFit.Infrastructure.Input.Factory;
 using NutriFit.Infrastructure.Input.Queries;
 using System.Data;
 using Dapper;
-
+using MySqlConnector;
 
 namespace NutriFit.Infrastructure.Input.Repositories
 {
@@ -27,8 +27,12 @@ namespace NutriFit.Infrastructure.Input.Repositories
                     _conn.Execute(query.Query, query.Parameters);
                 }
             }
-            catch
+            catch(Exception ex)
             {
+                if(ex.Message.Contains("Duplicate entry"))
+                {
+                    throw new Exception("Email já existente");
+                }
                 throw new Exception("Erro ao inserir o usuário");
             }
             
