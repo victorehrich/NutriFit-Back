@@ -24,6 +24,7 @@ namespace NutriFitBack.Controllers
             try
             {
                 var user = repository.GetUsersByEmail(login.Email);
+                if(user.Password != login.Password) throw new Exception("");
                 if (user == null) throw new Exception("usuário não encontrado");
                 var token = TokenService.GenerateToken(user);
 
