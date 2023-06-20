@@ -1,15 +1,10 @@
 ﻿using NutriFit.Domain.Notifications;
 using NutriFit.Domain.Validations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace NutriFit.Domain.Entities
 {
     public class UserEntity: BaseEntity
     {
+        public int Id { get; private set; }
         List<Notification> _notifications;
 
         public string Email { get; private set; }
@@ -18,15 +13,15 @@ namespace NutriFit.Domain.Entities
 
         public string Password { get; private set; }
 
-        public int SexId { get; set; }
+        public int SexId { get; private set; }
 
-        public int BiotypeId { get; set; }
+        public int BiotypeId { get; private set; }
 
-        public double Heigth { get; set; }
+        public double Heigth { get; private set; }
 
-        public double Weigth { get; set; }
+        public double Weigth { get; private set; }
 
-        public int Age { get; set; }
+        public int Age { get; private set; }
 
         public IReadOnlyCollection<Notification> Notifications => _notifications;
 
@@ -40,6 +35,30 @@ namespace NutriFit.Domain.Entities
                     int Age)
         {
 
+            this.Email = Email;
+            this.Name = Name;
+            this.Password = Password;
+            this.SexId = SexId;
+            this.BiotypeId = BiotypeId;
+            this.Heigth = Heigth;
+            this.Weigth = Weigth;
+            this.Age = Age;
+            _notifications = new List<Notification>();
+            IsValid();
+        }
+
+        public UserEntity(
+            int Id,
+            string Email,
+            string Name,
+            string Password,
+            int SexId,
+            int BiotypeId,
+            double Heigth,
+            double Weigth,
+            int Age)
+        {
+            this.Id = Id;
             this.Email = Email;
             this.Name = Name;
             this.Password = Password;

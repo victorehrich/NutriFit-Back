@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NutriFit.Domain.Entities
 {
-    public class BiotypeEntity :BaseEntity
+    public class BiotypeEntity
     {
         public BiotypeEntity(string biotypeName)
         {

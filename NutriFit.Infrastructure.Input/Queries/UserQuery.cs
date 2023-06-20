@@ -69,5 +69,35 @@ namespace NutriFit.Infrastructure.Input.Queries
             };
             return new QueryModel(this.Query, this.Parameters);
         }
+
+        public QueryModel UpdateUserQuery(UserEntity user)
+        {
+            this.Table = Map.GetUserTable();
+            this.Query = $@"
+                UPDATE {this.Table}
+                SET
+                    EMAIL = @Email,
+                    SEXID = @SexId,
+                    BIOTYPEID = @BiotypeId,
+                    HEIGTH = @Heigth,
+                    WEIGTH = @Weigth,
+                    AGE = @Age,
+                    CREATEDON = @CreatedOn
+                WHERE    
+                    ID = @Id
+                ";
+            this.Parameters = new
+            {
+                Id = user.Id,
+                Email = user.Email,
+                SexId = user.SexId,
+                BiotypeId = user.BiotypeId,
+                Heigth = user.Heigth,
+                Weigth = user.Weigth,
+                Age = user.Age,
+                CreatedOn = user.CreatedOn
+            };
+            return new QueryModel(this.Query, this.Parameters);
+        }
     }
 }

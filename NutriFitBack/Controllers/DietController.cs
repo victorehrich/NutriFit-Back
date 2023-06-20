@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NutriFit.Application.Input.Commands.UserContext;
 using NutriFit.Application.Input.Receivers.User;
+using NutriFit.Application.Output.DTOs;
 using NutriFit.Application.Output.Interfaces;
 using System.Security.Claims;
 
@@ -10,41 +11,27 @@ namespace NutriFitBack.Controllers
 {
     [ApiController]
     [Route("v1/[controller]")]
-    public class UserController : ControllerBase
+    public class DietController : ControllerBase
     {
-        private readonly InsertUserReceiver _insertUserReceiver;
-        private readonly UpdateUserReceiver _updateUserReceiver;
 
-        private readonly IReadUserRepository _repository;
+        private readonly IReadDietRepository _repository;
 
-        public UserController(InsertUserReceiver receiver, UpdateUserReceiver updateUserReceiver, IReadUserRepository repository)
+        public DietController(IReadDietRepository repository)
         {
             _repository = repository;
-            _insertUserReceiver = receiver;
-            _updateUserReceiver = updateUserReceiver;
         }
 
-        [HttpPost]
-        [Route("")]
-        [AllowAnonymous]
-        public ActionResult<dynamic> CreateUser([FromBody] UserCommand command)
-        {
-            var state = _insertUserReceiver.Action(command);
-            return state;
-        }
         [HttpGet]
         [Route("")]
         [Authorize]
-        public ActionResult<dynamic> GetUser()
+        public ActionResult<IEnumerable<DietsDTO>> GetDiets()
         {
             try
             {
                 var userId = getUserIdFromToken();
-                var user = _repository.GetUsersById(userId);
-                if (user is null) return NotFound("usuário não encontrado");
-                user.Password = "";
+                var diets = _repository.GetDiets(userId);
 
-                return user;
+                return Ok(diets);
             }
             catch (Exception ex)
             {
@@ -52,17 +39,18 @@ namespace NutriFitBack.Controllers
             }
 
         }
-        [HttpPut]
-        [Route("")]
+
+        [HttpGet]
+        [Route("{dietScheduleId}")]
         [Authorize]
-        public ActionResult<dynamic> UpdateUser([FromBody] UpdateUserCommand command)
+        public ActionResult<DishScheduleDTO> GetDiet(int dietScheduleId)
         {
             try
             {
                 var userId = getUserIdFromToken();
-                if (userId != command.UserId) throw new Exception("Unauthorized");
-                var state = _updateUserReceiver.Action(command);
-                return state;
+                var diet = _repository.GetDiet(dietScheduleId);
+
+                return Ok(diet);
             }
             catch (Exception ex)
             {

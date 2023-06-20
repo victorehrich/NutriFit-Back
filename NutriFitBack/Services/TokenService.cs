@@ -19,9 +19,9 @@ namespace NutriFitBack.Services
                     Expires = DateTime.UtcNow.AddHours(1),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
                     Subject = new System.Security.Claims.ClaimsIdentity(new[] {
-                    new Claim(ClaimTypes.Name, user.Email),
-                    new Claim("Id", user.Id.ToString()),
-                })
+                        new Claim(ClaimTypes.Email, user.Email),
+                        new Claim("Id", user.Id.ToString()),
+                    })
                 };
                 var token = tokenHandler.CreateToken(tokenDescriptor);
                 return tokenHandler.WriteToken(token);

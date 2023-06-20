@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NutriFit.Application.Input.Receivers
+namespace NutriFit.Application.Input.Receivers.User
 {
     public class InsertUserReceiver : IReceiver<UserCommand, State>
     {
@@ -38,7 +38,7 @@ namespace NutriFit.Application.Input.Receivers
                 _repository.InsertUser(user);
                 return new State(200, "Usuário adicionado com sucesso", user);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return new State(500, ex.Message, null);
             }

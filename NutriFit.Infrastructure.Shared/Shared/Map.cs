@@ -21,5 +21,21 @@ namespace NutriFit.Infrastructure.Shared.Shared
         {
             return $"{prefix}.TB_USER_BIOTYPE";
         }
+        public static string GetMealTable()
+        {
+            return $"{prefix}.TB_MEAL";
+        }
+        public static string GetDietScheduleTable()
+        {
+            return $"{prefix}.TB_DIET_SCHEDULE";
+        }
+        public static string GetDietTable()
+        {
+            return $"{prefix}.TB_DIET";
+        }
+        public static string GetUserDietTable()
+        {
+            return $"{prefix}.TB_USER_DIET";
+        }
     }
 }

@@ -37,5 +37,25 @@ namespace NutriFit.Infrastructure.Input.Repositories
             }
             
         }
+
+        public void UpdateUser(UserEntity user)
+        {
+            var query = new UserQuery().UpdateUserQuery(user);
+            try
+            {
+                using (_conn)
+                {
+                    _conn.Execute(query.Query, query.Parameters);
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("Duplicate entry"))
+                {
+                    throw new Exception("Email já existente");
+                }
+                throw new Exception("Erro ao inserir o usuário");
+            }
+        }
     }
 }

@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace NutriFit.Domain.Entities
 {
-    public class SexEntity
+    public class DishEntity
     {
-        public SexEntity(string sexName)
-        {
-            SexName = sexName;
-        }
+        public string DishName { get; set; }
+        public string DishQuantity { get; set; }
+        public string DishTime { get; set; }
 
-        public string SexName { get; private set; }
     }
 }

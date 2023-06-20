@@ -5,5 +5,7 @@ namespace NutriFit.Application.Input.Repositories
     public interface IWriteUserRepository
     {
         void InsertUser(UserEntity user);
+
+        void UpdateUser(UserEntity user);
     }
 }

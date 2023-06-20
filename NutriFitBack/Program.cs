@@ -10,7 +10,7 @@ using NutriFit.Infrastructure.Output.Repositories;
 using NutriFitBack;
 using System.Text;
 using System.Text.Json.Serialization;
-using NutriFit.Application.Input.Receivers;
+using NutriFit.Application.Input.Receivers.User;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +19,13 @@ builder.Services.AddScoped<OutputFactory.SqlFactory>();
 
 builder.Services.AddTransient<IWriteUserRepository, WriteUserRepository>();
 builder.Services.AddTransient<IReadUserRepository, ReadUserRepository>();
+
 builder.Services.AddTransient<InsertUserReceiver>();
+builder.Services.AddTransient<UpdateUserReceiver>();
+
+builder.Services.AddTransient<IReadDietRepository, ReadDietRepository>();
+
+
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
