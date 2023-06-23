@@ -12,8 +12,8 @@ namespace NutriFit.Infrastructure.Input.Factory
     {
         public IDbConnection MySqlConnection()
         {
-            /*var conn = new MySqlConnection("server=127.0.0.1;port=3306; uid=user; pwd=password; database=db");*/
-            var conn = new MySqlConnection("server=database-1.cw6cnez26jd0.us-east-1.rds.amazonaws.com; port=3306; uid=admin; pwd=asdf1234; database=db");
+            var conn = new MySqlConnection("server=mysql;port=3306; uid=user; pwd=password; database=db");
+            /*var conn = new MySqlConnection("server=database-1.cw6cnez26jd0.us-east-1.rds.amazonaws.com; port=3306; uid=admin; pwd=asdf1234; database=db");*/
             return conn;
         }
     }
