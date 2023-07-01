@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Text.Json;
 using Dapper;
 using NutriFit.Application.Output.DTOs;
 using NutriFit.Application.Output.Interfaces;
@@ -17,7 +18,7 @@ namespace NutriFit.Infrastructure.Output.Repositories
             _conn = factory.MySqlConnection();
         }
 
-        public DishScheduleDTO GetDiet(int dietScheduleId)
+        public DishScheduleDTO GetDietSchedule(int dietScheduleId)
         {
             var dishSchedule = new DishScheduleDTO();
             try
@@ -25,13 +26,32 @@ namespace NutriFit.Infrastructure.Output.Repositories
                 using (_conn)
                 {
                     QueryModel query = new DietQueries().GetAllMorningMeals(dietScheduleId);
-                    var queryReturnHandler = _conn.QuerySingleOrDefault<MealDTO>(query.Query);
-                    dishSchedule.MorningMeal = _conn.QuerySingleOrDefault<MealDTO>(query.Query) as MealDTO;
+                    var queryReturnHandler = _conn.QuerySingleOrDefault(query.Query);
+                    dishSchedule.MorningMeal = new MealDTO
+                    {
+                        StartTime = queryReturnHandler.StartTime,
+                        EndTime = queryReturnHandler.EndTime,
+                        MealId = queryReturnHandler.MealId,
+                        Dish = JsonSerializer.Deserialize<List<DishDTO>>(queryReturnHandler.Dish)
+                    };
                     query = new DietQueries().GetAllAfternoonMeals(dietScheduleId);
-                    dishSchedule.AfternoonMeal = _conn.QuerySingleOrDefault<MealDTO>(query.Query) as MealDTO;
+                    queryReturnHandler = _conn.QuerySingleOrDefault(query.Query);
+                    dishSchedule.AfternoonMeal = new MealDTO
+                    {
+                        StartTime = queryReturnHandler.StartTime,
+                        EndTime = queryReturnHandler.EndTime,
+                        MealId = queryReturnHandler.MealId,
+                        Dish = new List<DishDTO>(JsonSerializer.Deserialize<DishDTO[]>(queryReturnHandler.Dish))
+                    };
                     query = new DietQueries().GetAllNightMeals(dietScheduleId);
-                    dishSchedule.NightnMeal = _conn.QuerySingleOrDefault<MealDTO>(query.Query) as MealDTO;
-
+                    queryReturnHandler = _conn.QuerySingleOrDefault(query.Query);
+                    dishSchedule.NightMeal = new MealDTO
+                    {
+                        StartTime = queryReturnHandler.StartTime,
+                        EndTime = queryReturnHandler.EndTime,
+                        MealId = queryReturnHandler.MealId,
+                        Dish = new List<DishDTO>(JsonSerializer.Deserialize<DishDTO[]>(queryReturnHandler.Dish))
+                    };
                     return dishSchedule;
                 }
             }
@@ -54,6 +74,22 @@ namespace NutriFit.Infrastructure.Output.Repositories
             catch
             {
                 throw new Exception("Falha ao recuperar as dietas");
+            }
+        }
+
+        public DietsDTO GetDiet(int dietId)
+        {
+            var query = new DietQueries().GetDiet(dietId);
+            try
+            {
+                using (_conn)
+                {
+                    return _conn.QueryFirst<DietsDTO>(query.Query) as DietsDTO;
+                }
+            }
+            catch
+            {
+                throw new Exception("Falha ao recuperar a dieta");
             }
         }
     }

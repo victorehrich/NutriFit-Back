@@ -10,7 +10,8 @@ namespace NutriFit.Application.Output.Interfaces
     public interface IReadDietRepository
     {
         IEnumerable<DietsDTO> GetDiets(int userId);
-        DishScheduleDTO GetDiet(int dietScheduleId);
+        DietsDTO GetDiet(int dietId);
+        DishScheduleDTO GetDietSchedule(int dietScheduleId);
 
 
     }

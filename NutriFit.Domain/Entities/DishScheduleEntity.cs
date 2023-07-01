@@ -19,6 +19,15 @@ namespace NutriFit.Domain.Entities
             IsValid();
 
         }
+        public DishScheduleEntity(int morningMealId, int afternoonMealId, int nightnMealId)
+        {
+            MorningMealId = morningMealId;
+            AfternoonMealId = afternoonMealId;
+            NightnMealId = nightnMealId;
+            _notifications = new List<Notification>();
+            IsValid();
+
+        }
         public IReadOnlyCollection<Notification> Notifications => _notifications;
 
         List<Notification> _notifications;

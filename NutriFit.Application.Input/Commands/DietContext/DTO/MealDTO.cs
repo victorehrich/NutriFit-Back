@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NutriFit.Application.Output.DTOs
+namespace NutriFit.Application.Input.Commands.DietContext.DTO
 {
-    public class MealDTO
+    public class MealDietContext
     {
         public int MealId { get; set; }
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
-        public List<DishDTO> Dish { get; set; }
+        public List<DishDietContext> Dish { get; set; }
     }
 }

@@ -22,6 +22,14 @@ namespace NutriFit.Domain.Entities
             IsValid();
         }
 
+        public UserDietEntity(int userId, int dietId)
+        {
+            UserId = userId;
+            DietId = dietId;
+            _notifications = new List<Notification>();
+            IsValid();
+        }
+
         public int Id { get; set; }
         public int UserId { get; set; }
         public int DietId { get; set; }

@@ -5,25 +5,28 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutriFitBack", "NutriFitBack\NutriFitBack.csproj", "{02C72913-54CB-4701-9E0C-0380A0D08C54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutriFit.Domain", "NutriFit.Domain\NutriFit.Domain.csproj", "{62597BD4-917A-41A3-8756-49804E44A9D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutriFit.Domain", "NutriFit.Domain\NutriFit.Domain.csproj", "{62597BD4-917A-41A3-8756-49804E44A9D0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{759B35A8-8353-4C05-A0D1-5F04ED86D592}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutriFit.Application.Input", "NutriFit.Application.Input\NutriFit.Application.Input.csproj", "{8D297852-57A5-41C3-9BAE-B988F45EBC6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutriFit.Application.Input", "NutriFit.Application.Input\NutriFit.Application.Input.csproj", "{8D297852-57A5-41C3-9BAE-B988F45EBC6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutriFit.Application.Output", "NutriFit.Application.Output\NutriFit.Application.Output.csproj", "{6E5EC90D-F3F8-4C69-AC23-65CB3A7E7D79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutriFit.Application.Output", "NutriFit.Application.Output\NutriFit.Application.Output.csproj", "{6E5EC90D-F3F8-4C69-AC23-65CB3A7E7D79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{C92F7EB6-CDB8-4C2E-BD56-3EAAB25AE5D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{D7E8812D-50E9-43AD-8199-CB3A3260C8EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutriFit.Infrastructure.Input", "NutriFit.Infrastructure.Input\NutriFit.Infrastructure.Input.csproj", "{EF0EDA4B-1D0F-47C2-A196-AB8CF84B74DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutriFit.Infrastructure.Input", "NutriFit.Infrastructure.Input\NutriFit.Infrastructure.Input.csproj", "{EF0EDA4B-1D0F-47C2-A196-AB8CF84B74DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutriFit.Infrastructure.Output", "NutriFit.Infrastructure.Output\NutriFit.Infrastructure.Output.csproj", "{AD6C8DC0-BBA8-477D-909E-3ED67CA71FFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutriFit.Infrastructure.Output", "NutriFit.Infrastructure.Output\NutriFit.Infrastructure.Output.csproj", "{AD6C8DC0-BBA8-477D-909E-3ED67CA71FFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutriFit.Infrastructure.Shared", "NutriFit.Infrastructure.Shared\NutriFit.Infrastructure.Shared.csproj", "{D4A8BEEA-EEEE-458D-8C4E-CC978E9CB962}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NutriFit.Infrastructure.Shared", "NutriFit.Infrastructure.Shared\NutriFit.Infrastructure.Shared.csproj", "{D4A8BEEA-EEEE-458D-8C4E-CC978E9CB962}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{9F22E475-30BE-48F6-B02E-BCAFA88A629A}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile.txt = Dockerfile.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,6 +11,7 @@ using NutriFitBack;
 using System.Text;
 using System.Text.Json.Serialization;
 using NutriFit.Application.Input.Receivers.User;
+using NutriFit.Application.Input.Receivers.Diet;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,12 @@ builder.Services.AddTransient<InsertUserReceiver>();
 builder.Services.AddTransient<UpdateUserReceiver>();
 
 builder.Services.AddTransient<IReadDietRepository, ReadDietRepository>();
+builder.Services.AddTransient<IWriteDietRepository, WriteDietRepository>();
+
+builder.Services.AddTransient<InsertMealReceiver>();
+builder.Services.AddTransient<InsertDietReceiver>();
+builder.Services.AddTransient<UpdateDietStatusReceiver>();
+
 
 
 
@@ -37,7 +44,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: AcceptOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:4200").AllowAnyHeader()
+                          policy.WithOrigins("http://localhost:4200")
+                                                  .AllowAnyHeader()
                                                   .AllowAnyMethod();
                       });
 });

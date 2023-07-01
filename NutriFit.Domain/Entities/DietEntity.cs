@@ -13,10 +13,12 @@ namespace NutriFit.Domain.Entities
 
         List<Notification> _notifications;
 
-        public DietEntity(int id, bool currentActive, int mondayScheduleId, int tuesdayScheduleId, int wednesdayScheduleId, int thursdayScheduleId, int fridayScheduleId, int saturdayScheduleId, int sundayScheduleId)
+        public DietEntity(int id, bool currentActive, string dietName, string dietGoal, int mondayScheduleId, int tuesdayScheduleId, int wednesdayScheduleId, int thursdayScheduleId, int fridayScheduleId, int saturdayScheduleId, int sundayScheduleId)
         {
             _notifications = new List<Notification>();
             Id = id;
+            DietName = dietName;
+            DietGoal = dietGoal;
             CurrentActive = currentActive;
             MondayScheduleId = mondayScheduleId;
             TuesdayScheduleId = tuesdayScheduleId;
@@ -27,7 +29,25 @@ namespace NutriFit.Domain.Entities
             SundayScheduleId = sundayScheduleId;
         }
 
+        public DietEntity(bool currentActive, string dietName, string dietGoal, int mondayScheduleId, int tuesdayScheduleId, int wednesdayScheduleId, int thursdayScheduleId, int fridayScheduleId, int saturdayScheduleId, int sundayScheduleId)
+        {
+            CurrentActive = currentActive;
+            DietName = dietName;
+            DietGoal = dietGoal;
+            MondayScheduleId = mondayScheduleId;
+            TuesdayScheduleId = tuesdayScheduleId;
+            WednesdayScheduleId = wednesdayScheduleId;
+            ThursdayScheduleId = thursdayScheduleId;
+            FridayScheduleId = fridayScheduleId;
+            SaturdayScheduleId = saturdayScheduleId;
+            SundayScheduleId = sundayScheduleId;
+            _notifications = new List<Notification>();
+
+        }
+
         public int Id { get; set; }
+        public string DietName { get; set; }
+        public string DietGoal { get; set; }
         public bool CurrentActive { get; set; }
         public int MondayScheduleId { get; set; }
         public int TuesdayScheduleId { get; set; }

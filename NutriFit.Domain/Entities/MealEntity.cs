@@ -9,9 +9,18 @@ namespace NutriFit.Domain.Entities
 {
     public class MealEntity : BaseEntity
     {
-        public MealEntity(int id, TimeOnly startTime, TimeOnly endTime, List<DishEntity> dish)
+        public MealEntity(int id, TimeSpan startTime, TimeSpan endTime, List<DishEntity> dish)
         {
             Id = id;
+            StartTime = startTime;
+            EndTime = endTime;
+            Dish = dish;
+            _notifications = new List<Notification>();
+            IsValid();
+
+        }
+        public MealEntity(TimeSpan startTime, TimeSpan endTime, List<DishEntity> dish)
+        {
             StartTime = startTime;
             EndTime = endTime;
             Dish = dish;
@@ -23,8 +32,8 @@ namespace NutriFit.Domain.Entities
 
         List<Notification> _notifications;
         public int Id { get; set; }
-        public TimeOnly StartTime { get; set; }
-        public TimeOnly EndTime { get; set; }
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; }
         public List<DishEntity> Dish { get; set; }
         public void PullNotification(Notification notification)
         {

@@ -93,5 +93,36 @@ namespace NutriFit.Infrastructure.Output.Queries
             ";
             return new QueryModel(this.Query, null);
         }
+
+        public QueryModel GetDiet(int dietId)
+        {
+            this.InnerTable = new List<string>();
+            this.Table = Map.GetUserDietTable();
+            this.InnerTable.Add(Map.GetDietTable());
+            this.Query = $@"
+            SELECT 
+                UD.DIETID AS DietId, 
+                UD.USERID AS UserId,
+                D.DIETNAME as DietName,
+                D.DIETGOAL AS DietGoal,
+                D.CURRENTACTIVE AS CurrentActive,
+                D.CREATEDON AS CreatedOn,
+                D.MONDAYSCHEDULEID AS MondayScheduleId,
+                D.TUESDAYSCHEDULEID AS TuesdayScheduleId,
+                D.WEDNESDAYSCHEDULEID AS WednesdayScheduleId,
+                D.THURSDAYSCHEDULEID AS ThursdayScheduleId,
+                D.FRIDAYSCHEDULEID AS FridayScheduleId,
+                D.SATURDAYSCHEDULEID AS SaturdayScheduleId,
+                D.SUNDAYSCHEDULEID as SundayScheduleId
+            FROM {this.Table} UD
+            JOIN {this.InnerTable[0]} D 
+            ON UD.DIETID = D.ID
+            WHERE
+            UD.DIETID = {dietId}
+            ORDER BY D.CREATEDON DESC
+            ";
+            return new QueryModel(this.Query, null);
+        }
+        
     }
 }
