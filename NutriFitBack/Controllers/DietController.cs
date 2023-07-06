@@ -241,7 +241,7 @@ namespace NutriFitBack.Controllers
                         }
                     }
                 }
-                throw new HttpRequestException("Falha ao requisitar dietas", new Exception(""), (System.Net.HttpStatusCode)response.StatusCode);
+                throw new HttpRequestException("Falha ao requisitar dietas", new Exception(""), response.StatusCode);
             }
             catch (Exception ex)
             {

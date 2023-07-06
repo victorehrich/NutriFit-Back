@@ -12,6 +12,8 @@ namespace NutriFit.Application.Output.Interfaces
         IEnumerable<UserDTO> GetUsers();
         UserDTO GetUsersById(int id);
         UserDTO GetUsersByEmail(string email);
+        Task<ReturnGetImageUserDTO> DownloadUserImage(ImageUserDTO imageUserDTO);
+
 
     }
 }

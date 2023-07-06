@@ -23,6 +23,8 @@ builder.Services.AddTransient<IReadUserRepository, ReadUserRepository>();
 
 builder.Services.AddTransient<InsertUserReceiver>();
 builder.Services.AddTransient<UpdateUserReceiver>();
+builder.Services.AddTransient<InsertOrUpdateImageReceiver>();
+
 
 builder.Services.AddTransient<IReadDietRepository, ReadDietRepository>();
 builder.Services.AddTransient<IWriteDietRepository, WriteDietRepository>();
