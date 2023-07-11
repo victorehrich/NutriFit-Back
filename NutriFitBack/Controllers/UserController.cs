@@ -64,18 +64,25 @@ namespace NutriFitBack.Controllers
         [Authorize]
         public async Task<ActionResult<dynamic>> GetUsetImage(string userName)
         {
-            var userId = getUserIdFromToken();
-            var imageUserDTO = new ImageUserDTO()
+            try
             {
-                PathFile = userId + " - " + userName,
-                BucketName = "nutrifit-img",
-                AwsKey = _config["AWSConfiguration:AwsBucketAccessKey"],
-                AwsSecretKey = _config["AWSConfiguration:AwsBucketSecretKey"]
-            };
+                var userId = getUserIdFromToken();
+                var imageUserDTO = new ImageUserDTO()
+                {
+                    PathFile = userId + " - " + userName,
+                    BucketName = "nutrifit-img",
+                    AwsKey = _config["AWSConfiguration:AwsBucketAccessKey"],
+                    AwsSecretKey = _config["AWSConfiguration:AwsBucketSecretKey"]
+                };
 
 
-            var state = await _repository.DownloadUserImage(imageUserDTO);
-            return state;
+                var state = await _repository.DownloadUserImage(imageUserDTO);
+                return state;
+            }catch (Exception ex)
+            {
+                return new ReturnGetImageUserDTO();
+            }
+            
         }
         [HttpGet]
         [Route("")]
@@ -86,7 +93,7 @@ namespace NutriFitBack.Controllers
             {
                 var userId = getUserIdFromToken();
                 var user = _repository.GetUsersById(userId);
-                if (user is null) return NotFound("usu·rio n„o encontrado");
+                if (user is null) return NotFound("usu√°rio n√£o encontrado");
                 user.Password = "";
 
                 return user;
