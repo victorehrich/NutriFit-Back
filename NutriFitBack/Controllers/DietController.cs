@@ -193,7 +193,34 @@ namespace NutriFitBack.Controllers
             }
 
         }
-        private int getUserIdFromToken()
+        [HttpGet]
+        [Route("todayDiet")]
+        [Authorize]
+        public ActionResult<DishScheduleDTO> GetTodayDietByUserId()
+        {
+            try
+            {
+                var userId = getUserIdFromToken();
+                var diets = _repository.GetDiets(userId).ToArray();
+                DishScheduleDTO diet = new DishScheduleDTO();
+                DietsDTO currentDiet = new DietsDTO();
+                foreach (var d in diets)
+                {
+                    if (d.CurrentActive)
+                    {
+                        currentDiet = d;
+                    }
+                }
+                diet = _repository.GetTodayDiet(currentDiet);
+
+                return Ok(diet);
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized(ex.Message);
+            }
+
+            private int getUserIdFromToken()
         {
             try
             {

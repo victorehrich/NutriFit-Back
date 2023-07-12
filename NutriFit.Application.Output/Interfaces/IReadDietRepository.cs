@@ -12,6 +12,7 @@ namespace NutriFit.Application.Output.Interfaces
         IEnumerable<DietsDTO> GetDiets(int userId);
         DietsDTO GetDiet(int dietId);
         DishScheduleDTO GetDietSchedule(int dietScheduleId);
+        DishScheduleDTO GetTodayDiet(DietsDTO currentDiet);
 
 
     }
