@@ -78,11 +78,12 @@ namespace NutriFitBack.Controllers
 
                 var state = await _repository.DownloadUserImage(imageUserDTO);
                 return state;
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return new ReturnGetImageUserDTO();
             }
-            
+
         }
         [HttpGet]
         [Route("")]
