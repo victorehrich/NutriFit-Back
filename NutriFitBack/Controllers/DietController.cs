@@ -219,8 +219,8 @@ namespace NutriFitBack.Controllers
             {
                 return Unauthorized(ex.Message);
             }
-
-            private int getUserIdFromToken()
+        }
+        private int getUserIdFromToken()
         {
             try
             {
