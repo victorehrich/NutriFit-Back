@@ -17,6 +17,7 @@ namespace NutriFitBack.Controllers
     {
         private const string dietGptURL = "https://uvuykll6f4nomzsmm766jwssdm0hsgpb.lambda-url.us-east-2.on.aws/";
         private readonly IReadDietRepository _repository;
+        private readonly IReadUserRepository _repositoryUser;
         private readonly InsertMealReceiver _insertMealReceiver;
         private readonly InsertDietReceiver _insertDietReceiver;
         private readonly UpdateDietStatusReceiver _updateDietStatusReceiver;
@@ -24,12 +25,13 @@ namespace NutriFitBack.Controllers
         private static readonly HttpClient _client = new();
 
 
-        public DietController(IReadDietRepository repository, InsertMealReceiver insertMealReceiver, InsertDietReceiver insertDietReceiver, UpdateDietStatusReceiver updateDietStatusReceiver)
+        public DietController(IReadDietRepository repository, InsertMealReceiver insertMealReceiver, InsertDietReceiver insertDietReceiver, UpdateDietStatusReceiver updateDietStatusReceiver, IReadUserRepository repositoryUser)
         {
             _repository = repository;
             _insertMealReceiver = insertMealReceiver;
             _insertDietReceiver = insertDietReceiver;
             _updateDietStatusReceiver = updateDietStatusReceiver;
+            _repositoryUser = repositoryUser;
         }
 
         [HttpGet]
@@ -79,15 +81,16 @@ namespace NutriFitBack.Controllers
             try
             {
                 var userId = getUserIdFromToken();
+                var user = _repositoryUser.GetUsersById(userId);
                 var schedules = new List<int> ();
                 var responses = new List<DishScheduleDietContext>();
 
                 //GTP 3.5 aceita apenas 3 requests por minuto. Gambiarra provisória.
                 var taskList = new[]
                 {
-                  RequestDietGPT(DayOfWeek.Monday, insertDietDTO),
-                  RequestDietGPT(DayOfWeek.Tuesday, insertDietDTO),
-                  RequestDietGPT(DayOfWeek.Wednesday, insertDietDTO)
+                  RequestDietGPT(DayOfWeek.Monday, insertDietDTO, user),
+                  RequestDietGPT(DayOfWeek.Tuesday, insertDietDTO, user),
+                  RequestDietGPT(DayOfWeek.Wednesday, insertDietDTO, user)
                 };
 
                 var completedTasks = await Task.WhenAll(taskList);
@@ -101,9 +104,9 @@ namespace NutriFitBack.Controllers
 
                 taskList = new[]
                 {
-                  RequestDietGPT(DayOfWeek.Thursday, insertDietDTO),
-                  RequestDietGPT(DayOfWeek.Friday, insertDietDTO),
-                  RequestDietGPT(DayOfWeek.Saturday, insertDietDTO)
+                  RequestDietGPT(DayOfWeek.Thursday, insertDietDTO, user),
+                  RequestDietGPT(DayOfWeek.Friday, insertDietDTO, user),
+                  RequestDietGPT(DayOfWeek.Saturday, insertDietDTO, user),
                 };
 
                 completedTasks = await Task.WhenAll(taskList);
@@ -117,7 +120,7 @@ namespace NutriFitBack.Controllers
 
                 taskList = new[]
                 {
-                  RequestDietGPT(DayOfWeek.Sunday, insertDietDTO)
+                  RequestDietGPT(DayOfWeek.Sunday, insertDietDTO, user),
                 };
 
                 completedTasks = await Task.WhenAll(taskList);
@@ -239,7 +242,7 @@ namespace NutriFitBack.Controllers
                 throw new Exception("Something went wrong!");
             }
         }
-        private static async Task<DishScheduleDietContext> RequestDietGPT(DayOfWeek dayOfWeekEnum, InsertDietDTO insertDietDTO)
+        private static async Task<DishScheduleDietContext> RequestDietGPT(DayOfWeek dayOfWeekEnum, InsertDietDTO insertDietDTO, UserDTO user)
         {
             var jsonBody = JsonSerializer.Serialize(insertDietDTO);
             var jObject = JObject.Parse(jsonBody);
@@ -249,8 +252,19 @@ namespace NutriFitBack.Controllers
                 if ((int)dayOfWeekEnum > 0)
                 {
                     jObject.Remove("DayOfWeek");
+                    jObject.Remove("Biotype");
+                    jObject.Remove("Sex");
+                    jObject.Remove("Heigth");
+                    jObject.Remove("Weigth");
+                    jObject.Remove("Age");
                 }
                 jObject.Add("DayOfWeek", dayOfWeek);
+                jObject.Add("Biotype", user.BiotypeName);
+                jObject.Add("Sex", user.SexName);
+                jObject.Add("Heigth", user.Heigth);
+                jObject.Add("Weigth", user.Weigth);
+                jObject.Add("Age", user.Age);
+
 
                 var resultAsJsonString = jObject.ToString();
 
