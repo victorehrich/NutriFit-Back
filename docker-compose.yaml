@@ -9,7 +9,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     ports:
-      - 8082:80
+      - 80:80
   mysql:
     image: mysql:8.0.30
     ports:
